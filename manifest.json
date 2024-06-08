@@ -1,0 +1,14 @@
+{
+    "namespace": "Recurrsed",
+    "name": "Loadouts",
+    "FullName": "Recurrsed-Loadouts",
+    "version_number": "0.0.1",
+    "website_url": "",
+    "description": "Loadouts for Hades II",
+    "dependencies": [
+      "Hell2Modding-Hell2Modding-1.0.22",
+      "SGG_Modding-ENVY-1.0.0",
+      "SGG_Modding-Chalk-2.0.2",
+      "SGG_Modding-ReLoad-1.0.1"
+    ]
+}
