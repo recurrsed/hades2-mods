@@ -1,10 +1,11 @@
 {
     "namespace": "Recurrsed",
-    "name": "Loadouts",
-    "FullName": "Recurrsed-Loadouts",
+    "name": "Minion builds",
+    "FullName": "Hades 2 Minion Builds",
     "version_number": "0.0.1",
     "website_url": "",
-    "description": "Loadouts for Hades II",
+    "author": "Recurrsed",
+    "description": "Allows minion builds in Hades II",
     "dependencies": [
       "Hell2Modding-Hell2Modding-1.0.22",
       "SGG_Modding-ENVY-1.0.0",
