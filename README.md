@@ -1,7 +1,9 @@
-# hades2-mods
+# Game mods
 
-# Loadouts
-Mod for Hades 2 Loadouts
+## Hades 2
+  - Loadouts
+  - Minion build
 
-# Minions
-Mod that allows minion builds
+##  Mannor Lords
+##  Elden Ring
+##  Palworld
