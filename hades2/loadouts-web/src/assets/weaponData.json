@@ -1,0 +1,22 @@
+[
+    {
+        "Id": "WeaponStaffSwing",
+        "DisplayName": "Witch's Staff"
+    },
+    {
+        "Id": "WeaponDagger",
+        "DisplayName": "Sister Blades"
+    },
+    {
+        "Id": "WeaponAxe",
+        "DisplayName": "Moonstone Axe"
+    },
+    {
+        "Id": "WeaponTorch",
+        "DisplayName": "Umbral Flames"
+    },
+    {
+        "Id": "WeaponLob",
+        "DisplayName": "Argent Skull"
+    }
+]

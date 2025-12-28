@@ -1,0 +1,2 @@
+# palworld-lvlup-script
+yep

@@ -1,0 +1,40 @@
+<ul id="loadout-list" class="flex flex-col flex-wrap max-h-52 items-start justify-start"></ul>
+<a id="download-file" style="display:none"></a>
+
+<script>
+    import { type LoadoutData } from "../pages/handlers"
+
+    const storageData = (JSON.parse(localStorage.getItem("loadout-data") || "[]") || []) as LoadoutData[]
+    const list = document.getElementById('loadout-list')
+
+    function duplicateExportFnCosFImports(clickedLoadoutIdx: number) {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(storageData[clickedLoadoutIdx]));
+        const dlAnchorElem = document.getElementById('download-file');
+        
+        dlAnchorElem?.setAttribute("href", dataStr);
+        dlAnchorElem?.setAttribute("download", "loadout.json");
+        dlAnchorElem?.click();
+    }
+
+    for (let i = 0; i < storageData.length; i++) {
+        const li = document.createElement('li')
+        li.className = "flex flex-col p-2 m-2 cursor-pointer relative hover:bg-slate-900 hover:scale-[1.03] ease-in-out w-[200px]"
+        
+        // Title
+        const title = document.createElement('span')
+        title.textContent = `Build ${i + 1}`
+        title.className = "text-slate-200 text-xl uppercase"
+
+        // Wep name
+        const weaponName = document.createElement('span')
+        weaponName.className = "text-slate-200 text-base"
+        weaponName.textContent = storageData[i].weapon
+
+        li.appendChild(title)
+        li.appendChild(weaponName)
+
+        li.addEventListener('click', () => duplicateExportFnCosFImports(i))
+
+        list?.appendChild(li)
+    }
+</script>

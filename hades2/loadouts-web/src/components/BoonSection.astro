@@ -1,0 +1,19 @@
+---
+import BoonData from "../assets/boonData.json"
+import BoonItems, { type BoonProps } from "./BoonItems.astro"
+
+type BData = {
+    "Apollo": BoonProps[],
+    "Aphrodite": BoonProps[],
+}
+
+---
+<ul class="flex flex-col max-h-[36rem] pr-2 overflow-auto">
+    {Object.keys(BoonData as unknown as BData).map((key, idx) => (
+        <li class={`${idx > 0 ? 'mt-6' : ''}`}>
+            <span class="text-slate-200 uppercase font-thin">Boons of {key}</span>
+        </li>
+
+        <BoonItems items={BoonData[key as keyof BData] as BoonProps[]} />
+    ))}
+</ul>

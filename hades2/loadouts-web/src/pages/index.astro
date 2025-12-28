@@ -1,0 +1,24 @@
+---
+import { Image, getImage } from 'astro:assets';
+
+import Layout from '../layouts/Layout.astro';
+import LoadoutList from '../components/LoadoutList.astro';
+
+import hades2Logo from '../assets/logo.png';
+import melinoeAvatar from '../assets/melinoe-avatar.png';
+const optimizedBackground = await getImage({src: hades2Logo, format: 'png'});
+
+---
+<Layout title="hai">
+	<main class="m-auto flex flex-col p-20">
+		 <div class="w-full flex items-start justify-center h-[384px] -z-10 relative">
+			 <div class="h-96 w-[557px] bg-top bg-no-repeat absolute" style={`background-image: url(${optimizedBackground.src});`}></div>
+			 <h1 class="text-white font-bold absolute top-1/2 left-1/2 translate-x-36 text-5xl uppercase -rotate-[25deg] shadow-lg" style="text-shadow: #71dd91 1px 0 10px;">Loadouts</h1>
+		 </div>
+
+		<div class="grid grid-cols-[1fr_900px] gap-x-3 items-center justify-center -mt-[300px]">
+			<LoadoutList />
+			<Image src={melinoeAvatar} alt="Melinoe Avatar" width="800"/>
+		</div>
+	</main>
+</Layout>

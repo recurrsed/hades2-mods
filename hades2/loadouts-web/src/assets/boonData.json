@@ -1,0 +1,64 @@
+{
+    "Apollo": [{
+        "Id": "ApolloWeaponBoon",
+        "DisplayName": "Nova Strike",
+        "Description": "Your Attacks deal more damage in a larger area.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "ApolloSpecialBoon",
+        "DisplayName": "Nova Flourish",
+        "Description": "Your Specials deal more damage in a larger area.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "ApolloCastBoon",
+        "DisplayName": "Solar Ring",
+        "Description": "After your Casts expires, rapidly deal damage in the area for 2 Sec.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "ApolloSprintBoon",
+        "DisplayName": "Blinding Sprint",
+        "Description": "Your Sprint is faster and inflicts Blind on nearby foes.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "ApolloManaBoon",
+        "DisplayName": "Lucid Gain",
+        "Description": "While standing in your Casts, gradually restore Mana.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      }
+    ],
+    "Aphrodite": [{
+        "Id": "AphroditeWeaponBoon",
+        "DisplayName": "Flutter Strike",
+        "Description": "Your Attacks deal more damage to nearby foes.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "AphroditeSpecialBoon",
+        "DisplayName": "Flutter Flourish",
+        "Description": "Your Attacks deal more damage to nearby foes.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "AphroditeCastBoon",
+        "DisplayName": "Rapture Ring",
+        "Description": "Your Casts drag foes in and inflict Weak.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "AphroditeSprintBoon",
+        "DisplayName": "Passion Dash",
+        "Description": "Your Dash blasts foes near where you start and end, and inflicts Weak.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      },
+      {
+        "Id": "AphroditeManaBoon",
+        "DisplayName": "Glamour Gain",
+        "Description": "In each Encounter, 1 foe is always Weak. You restore Mana when Weak foes are nearby.",
+        "Rarities": ["Common", "Rare", "Epic", "Heroic"]
+      }
+    ]
+}

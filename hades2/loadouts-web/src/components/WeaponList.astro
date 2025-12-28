@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+import WeaponData from "../assets/weaponData.json"
+
+export type WData = { Id: string, DisplayName: string }[]
+
+---
+<ul class="flex flex-col">
+    {(WeaponData as unknown as WData).map(({ Id, DisplayName }) => (
+        <li data-weapon-item={Id} class="flex flex-row items-center px-2 shadow-lg py-6 cursor-pointer relative [&:not(.active)]:hover:scale-[1.03]  hover:bg-slate-900 ease-in-out">
+            <Image src={`/${Id}.png`} alt="staff icon" class={Id === "WeaponStaffSwing" ? "rotate-[30deg] absolute" : ""} width="50" height="50" />
+            <span class={`text-slate-200 text-xl uppercase ${Id === "WeaponStaffSwing" ? "ml-20" : "ml-8"}`}>{DisplayName}</span>
+        </li>
+    ))}
+</ul>

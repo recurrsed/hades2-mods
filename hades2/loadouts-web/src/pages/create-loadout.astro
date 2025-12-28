@@ -1,0 +1,40 @@
+---
+import { Image, getImage } from 'astro:assets';
+
+import Layout from '../layouts/Layout.astro';
+import WeaponList from '../components/WeaponList.astro';
+import BoonSection from '../components/BoonSection.astro';
+
+import hades2Logo from '../assets/logo.png';
+import melinoeAvatar from '../assets/melinoe-avatar.png';
+const optimizedBackground = await getImage({src: hades2Logo, format: 'png'});
+
+---
+<Layout title="hai">
+	<main class="m-auto flex flex-col p-20">
+		 <div class="w-full flex items-start justify-center h-[384px] -z-10 relative">
+			 <div class="h-96 w-[557px] bg-top bg-no-repeat absolute" style={`background-image: url(${optimizedBackground.src});`}></div>
+			 <h1 class="text-white font-bold absolute top-1/2 left-1/2 translate-x-36 text-5xl uppercase -rotate-[25deg] shadow-lg" style="text-shadow: #71dd91 1px 0 10px;">Loadouts</h1>
+		 </div>
+
+		<div class="grid grid-cols-[1fr_900px_1fr] gap-x-3 items-center justify-center -mt-[300px]">
+			<WeaponList />
+			<Image src={melinoeAvatar} alt="Melinoe Avatar" width="800"/>
+			<div>
+				<BoonSection />
+				<div class="flex flex-row justify-end gap-x-2 mt-5">
+					<button id="export-build" class="text-slate-200 hover:bg-slate-900 p-4 uppercase">
+						Export build
+					</button>
+					<button id="save-build" class="text-slate-200 hover:bg-slate-900 p-4 uppercase">
+						Save build
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<a id="download-file" style="display:none"></a>
+
+<script src="./handlers.ts">
